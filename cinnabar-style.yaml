@@ -1143,7 +1143,7 @@ layers:
                     text-blend-order:
                         priority: 50
                         visible: *text_visible_shields
-                        text_source: ref
+                        text_source: feature.ref
                         font:
                             fill: *text_fill_shield
                             size: 8px
@@ -1154,7 +1154,7 @@ layers:
                 draw:
                     text-blend-order:
                         visible: *text_visible_shields
-                        text_source: ref
+                        text_source: feature.ref
                         font:
                             fill: *text_fill_shield
                             size: 10px
@@ -1165,7 +1165,7 @@ layers:
                 draw:
                     text-blend-order:
                         visible: *text_visible_shields
-                        text_source: ref
+                        text_source: feature.ref
                         font:
                             fill: *text_fill_shield
                             size: 11px
@@ -1176,7 +1176,7 @@ layers:
                 draw:
                     text-blend-order:
                         visible: *text_visible_shields
-                        text_source: ref
+                        text_source: feature.ref
                         font:
                             fill: *text_fill_shield
                             size: 11px
@@ -1188,8 +1188,8 @@ layers:
                     text-blend-order:
                         priority: 50
                         visible: *text_visible_highway
-                        #text_source: ref
-                        text_source: function() { if( feature.ref && feature.name ) { return feature.ref + " " + feature.name; } else { return feature.name; } }
+                        #text_source: feature.ref
+                        text_source: function() { if( feature.ref && feature.name ) { return feature.ref + " " + feature.name; } if( feature.name ) { return feature.name; } else { return feature.ref; } }
                         font:
                             fill: *text_fill
                             size: 13px
@@ -1201,8 +1201,8 @@ layers:
                     text-blend-order:
                         priority: 50
                         visible: *text_visible_highway
-                        #text_source: ref
-                        text_source: function() { if( feature.ref && feature.name ) { return feature.ref + " " + feature.name; } else { return feature.name; } }
+                        #text_source: feature.ref
+                        text_source: function() { if( feature.ref && feature.name ) { return feature.ref + " " + feature.name; } if( feature.name ) { return feature.name; } else { return feature.ref; } }
                         font:
                             fill: *text_fill
                             size: 11px
@@ -1306,7 +1306,7 @@ layers:
                             text-blend-order:
                                 priority: 53
                                 visible: *text_visible_trunk_primary_e2
-                                text_source: ref
+                                text_source: feature.ref
                                 font:
                                     fill: *text_fill_shield
                                     size: 8px
@@ -1317,7 +1317,7 @@ layers:
                             text-blend-order:
                                 priority: 53
                                 visible: *text_visible_trunk_primary_e
-                                text_source: ref
+                                text_source: feature.ref
                                 font:
                                     fill: *text_fill_shield
                                     size: 9px
@@ -1328,7 +1328,7 @@ layers:
                             text-blend-order:
                                 priority: 53
                                 visible: *text_visible_trunk_primary
-                                text_source: function() { if( feature.ref && feature.name ) { return feature.ref + " " + feature.name; } else { return feature.name; } }
+                                text_source: function() { if( feature.ref && feature.name ) { return feature.ref + " " + feature.name; } if( feature.name ) { return feature.name; } else { return feature.ref; } }
                                 font:
                                     fill: *text_fill
                                     size: 11px
@@ -1339,7 +1339,7 @@ layers:
                             text-blend-order:
                                 priority: 53
                                 visible: *text_visible_trunk_primary
-                                text_source: function() { if( feature.ref && feature.name ) { return feature.ref + " " + feature.name; } else { return feature.name; } }
+                                text_source: function() { if( feature.ref && feature.name ) { return feature.ref + " " + feature.name; } if( feature.name ) { return feature.name; } else { return feature.ref; } }
                                 font:
                                     fill: *text_fill
                                     size: 12px
@@ -1385,7 +1385,7 @@ layers:
                         text-blend-order:
                             priority: 53
                             visible: *text_visible_trunk_primary
-                            text_source: function() { if( feature.ref && feature.name ) { return feature.ref + " " + feature.name; } else { return feature.name; } }
+                            text_source: function() { if( feature.ref && feature.name ) { return feature.ref + " " + feature.name; } if( feature.name ) { return feature.name; } else { return feature.ref; } }
                             font:
                                 fill: *text_fill2
                                 size: 14px
@@ -1396,7 +1396,7 @@ layers:
                         text-blend-order:
                             priority: 53
                             visible: *text_visible_trunk_primary
-                            text_source: function() { if( feature.ref && feature.name ) { return feature.ref + " " + feature.name; } else { return feature.name; } }
+                            text_source: function() { if( feature.ref && feature.name ) { return feature.ref + " " + feature.name; } if( feature.name ) { return feature.name; } else { return feature.ref; } }
                             font:
                                 fill: *text_fill2
                                 size: 15px
@@ -1407,7 +1407,7 @@ layers:
                         text-blend-order:
                             priority: 53
                             visible: *text_visible_trunk_primary
-                            text_source: function() { if( feature.ref && feature.name ) { return feature.ref + " " + feature.name; } else { return feature.name; } }
+                            text_source: function() { if( feature.ref && feature.name ) { return feature.ref + " " + feature.name; } if( feature.name ) { return feature.name; } else { return feature.ref; } }
                             font:
                                 fill: *text_fill2
                                 size: 16px
@@ -1544,8 +1544,8 @@ layers:
                         text-blend-order:
                             priority: 54
                             visible: *text_visible_secondary
-                            #text_source: ref
-                            text_source: function() { if( feature.ref && feature.name ) { return feature.ref + " " + feature.name; } else { return feature.name; } }
+                            #text_source: feature.ref
+                            text_source: function() { if( feature.ref && feature.name ) { return feature.ref + " " + feature.name; } if( feature.name ) { return feature.name; } else { return feature.ref; } }
                             font:
                                 fill: *text_fill2
                                 size: 13px
@@ -4217,7 +4217,7 @@ layers:
             text-blend-order:
                 visible: *text_visible_exits
                 interactive: true
-                text_source: ref
+                text_source: feature.ref
                 priority: 52
                 font:
                     fill: *text_fill_exits
@@ -4243,7 +4243,7 @@ layers:
             text-blend-order:
                 visible: *text_visible_airport_gate
                 interactive: true
-                text_source: ref
+                text_source: feature.ref
                 font:
                     fill: *text_fill
                     size: [[16,9px],[17,12px],[20,14px]]
