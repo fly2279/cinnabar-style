@@ -1774,7 +1774,7 @@ layers:
                         outline:
                             cap: butt
             labels-minor_road:
-                filter: { $zoom: [15,16,17] }
+                filter: { $zoom: [14, 15,16,17] }
                 draw:
                     text-blend-order:
                         priority: 56
@@ -1782,22 +1782,22 @@ layers:
                         text_source: name
                         font:
                             fill: *text_fill_road_e
-                            size: 11px
+                            size: 9px
                             stroke: { color: *text_stroke_road4, width: 2 }
                 labels-minor_road-z15:
                     filter: { $zoom: [15] }
                     draw:
                         text-blend-order:
                             font:
-                                size: 9px
-                                stroke: { color: *text_stroke_road4, width: 1 }
+                                size: 12px
+                                stroke: { color: *text_stroke_road4, width: 2 }
                 labels-minor_road-z16:
-                    filter: { $zoom: [15] }
+                    filter: { $zoom: [16] }
                     draw:
                         text-blend-order:
                             font:
-                                size: 10px
-                                stroke: { color: *text_stroke_road4, width: 1 }
+                                size: 14px
+                                stroke: { color: *text_stroke_road4, width: 3 }
             labels-minor_road2:
                 filter: { $zoom: { min: 18 } }
                 draw:
