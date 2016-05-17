@@ -6,7 +6,7 @@ map = (function () {
     // 'use strict';
 
     // defaults
-    var map_start_location = [37.7926, -122.4003, 15]; // San Francisco
+    var map_start_location = [37.4667, -100.7549, 15]; // San Francisco
     var style_file = 'cinnabar-style.yaml';
 
     /*** URL parsing ***/
@@ -52,7 +52,8 @@ map = (function () {
         scene: style_file,
         attribution: '<a href="https://mapzen.com/tangram" target="_blank">Tangram</a> | &copy; OSM contributors | <a href="https://mapzen.com/" target="_blank">Mapzen</a>'
     });
-
+    var aerial = L.tileLayer('https://tiles{s}.groundpointnine.com/Z{z}/{y}/{x}.png', {errorTileUrl: 'https://tiles0.groundpointnine.com/blank.png', zIndex: 1, reuseTiles: true, minZoom: 12, maxZoom: 16, subdomains: [0,1,2,3]});
+    aerial.addTo(map);
     window.layer = layer;
     var scene = layer.scene;
     window.scene = scene;
