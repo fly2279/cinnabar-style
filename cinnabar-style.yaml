@@ -24,7 +24,7 @@ labels-global:
     - &icon_visible_landuse_green     false
     - &text_visible_landuse_green     true
     - &label_visible_poi_landuse      true
-    - &icon_visible_poi_landuse       false
+    - &icon_visible_poi_landuse       true
     - &text_visible_poi_landuse       false
     - &label_visible_poi_landuse_e    true
     - &icon_visible_poi_landuse_e     false
@@ -123,11 +123,11 @@ cinnabar-colors:
         - &fence                      '#555555'
 
     areas:
-        - &scene1      white               # map background, water
-        - &water1      '#9dc3de'           # water
+        - &scene1      false               # map background, water
+        - &water1      false               # water
         - &water2      [.75,.75,.75]       # playa
-        - &water1_o    '#9dc3de'           # water stroke
-        - &water2_o    '#9dc3de'           # water stroke 2
+        - &water1_o    false               # water stroke
+        - &water2_o    false               # water stroke 2
         - &earth1      '#e3e2e0'           # land color
         - &earth1_r    '#666'              # land color road
         - &earth2      '#d8d3ca'           # urban
