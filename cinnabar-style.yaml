@@ -128,7 +128,7 @@ cinnabar-colors:
         - &water2      [.75,.75,.75]       # playa
         - &water1_o    false               # water stroke
         - &water2_o    false               # water stroke 2
-        - &earth1      '#e3e2e0'           # land color
+        - &earth1      false               # land color
         - &earth1_r    '#666'              # land color road
         - &earth2      '#d8d3ca'           # urban
         - &earth2_v    false               # urban visibility
